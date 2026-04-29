@@ -144,7 +144,7 @@ payBtn.addEventListener("click", function () {
       };
 
       try {
-        await fetch("https://script.google.com/macros/s/AKfycby65mAzDV14GrkPIChLMYUs2JUOtUhvFLPzcFZ6n-5SPVeVg5S-7Chhryv0cPduyNss/exec", {
+        await fetch("https://script.google.com/macros/s/AKfycbx3pbJZXQbBUVpy1ery1yF_IAg6zWdlIGw9e2wYvaC3YY1ytOKaRkoEt5npx53PkEzN/exec", {
           method: "POST",
           body: JSON.stringify(orderData),
           mode: "no-cors"
