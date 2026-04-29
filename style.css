@@ -27,6 +27,47 @@ body{
     linear-gradient(to right,#000 35%,#060300 100%);
 }
 
+/*bg notes */
+
+#music-background{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0;
+}
+
+.music-note{
+  position: absolute;
+  color: rgba(212,162,77,0.18);
+  font-size:28px;
+  animation: floatNote linear infinite;
+  user-select: none;
+}
+
+@keyframes floatNote{
+  0%{
+    transform: translateY(100vh) rotate(0deg);
+    opacity:0;
+  }
+
+  15%{
+    opacity:1;
+  }
+
+  85%{
+    opacity:1;
+  }
+
+  100%{
+    transform: translateY(-120px) rotate(360deg);
+    opacity:0;
+  }
+}
+
 /* TOP */
 .top-bar{
     display:flex;
@@ -1549,4 +1590,8 @@ button{
 
 .cancel-note a:hover{
     text-decoration:underline;
+}
+section{
+  position:relative;
+  z-index:1;
 }
