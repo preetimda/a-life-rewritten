@@ -107,7 +107,7 @@ payBtn.addEventListener("click", function () {
   const total = formData.qty * pricePerBook;
 
   const options = {
-    key: "rzp_test_SiDdmw8bHcgVgT", // replace with live key later
+    key: "rzp_live_SjM4kEL82emOz7", // replace with live key later
     amount: total * 100,
     currency: "INR",
     name: "Preeti Maurya",
