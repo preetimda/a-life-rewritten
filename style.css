@@ -1087,40 +1087,34 @@ body{
 /* CHECKBOX SECTION */
 
 .checkbox-group{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  margin:18px 0;
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
 .checkbox-group label{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  color:#f5e7c5;
-  font-size:16px;
-  line-height:1.5;
-  cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    font-size:18px;
+    line-height:1.5;
+    flex-wrap:wrap;
 }
 
 .checkbox-group input[type="checkbox"]{
-  width:18px;
-  height:18px;
-  margin-top:4px;
-  flex-shrink:0;
-  accent-color:#d4a24d;
-}
-
-.checkbox-group span{
-  display:block;
-  flex:1;
+    width:18px;
+    height:18px;
+    accent-color:#d4af37;
+    flex-shrink:0;
 }
 
 .checkbox-group a{
-  color:#d4a24d;
-  text-decoration:underline;
+    color:#d4af37;
+    text-decoration:underline;
+    cursor:pointer;
 }
-
 @media (max-width: 768px){
   .checkbox-group{
     gap:12px;
