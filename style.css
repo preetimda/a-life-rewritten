@@ -1,5 +1,8 @@
 /* section 1 */
-
+html, body{
+  margin:0;
+  padding:0;
+}
 *{
     margin:0;
     padding:0;
@@ -28,7 +31,6 @@ body{
 }
 
 /*bg notes */
-
 #music-background{
   position: fixed;
   top:0;
@@ -41,11 +43,11 @@ body{
 }
 
 .music-note{
-  position: absolute;
+  position:absolute;
   color: rgba(212,162,77,0.18);
   font-size:28px;
   animation: floatNote linear infinite;
-  user-select: none;
+  user-select:none;
 }
 
 @keyframes floatNote{
@@ -67,7 +69,6 @@ body{
     opacity:0;
   }
 }
-
 /* TOP */
 .top-bar{
     display:flex;
