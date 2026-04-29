@@ -2,23 +2,35 @@ const pricePerBook = 299;
 
 const qtyInput = document.getElementById("qty");
 const totalPrice = document.getElementById("totalPrice");
-const payBtn = document.getElementById("payBtn");
-const successMsg = document.getElementById("successMsg");
+const plusQty = document.getElementById("plusQty");
+const minusQty = document.getElementById("minusQty");
 
-/* ---------- INITIAL TOTAL ---------- */
-updateTotal();
-
-/* ---------- UPDATE TOTAL ---------- */
-qtyInput.addEventListener("input", updateTotal);
-
-function updateTotal() {
-  let qty = parseInt(qtyInput.value);
-
-  if (isNaN(qty) || qty < 1) qty = 1;
+function updateTotal(){
+  let qty = parseInt(qtyInput.value) || 1;
+  if(qty < 1) qty = 1;
 
   qtyInput.value = qty;
   totalPrice.textContent = qty * pricePerBook;
 }
+
+plusQty.addEventListener("click", () => {
+  qtyInput.value = parseInt(qtyInput.value) + 1;
+  updateTotal();
+});
+
+minusQty.addEventListener("click", () => {
+  let current = parseInt(qtyInput.value) || 1;
+  if(current > 1){
+    qtyInput.value = current - 1;
+    updateTotal();
+  }
+});
+
+qtyInput.addEventListener("input", updateTotal);
+qtyInput.addEventListener("change", updateTotal);
+
+updateTotal();
+
 
 /* ---------- MODAL FUNCTIONS ---------- */
 function openModal(id) {
