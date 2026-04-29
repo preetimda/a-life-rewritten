@@ -146,10 +146,8 @@ payBtn.addEventListener("click", function () {
       try {
         await fetch("https://script.google.com/macros/s/AKfycby65mAzDV14GrkPIChLMYUs2JUOtUhvFLPzcFZ6n-5SPVeVg5S-7Chhryv0cPduyNss/exec", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(orderData)
+          body: JSON.stringify(orderData),
+          mode: "no-cors"
         });
 
         successMsg.innerHTML = `
