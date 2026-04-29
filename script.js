@@ -99,26 +99,23 @@ payBtn.addEventListener("click", function () {
       };
 
       try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbzoq9k_D4K5FVX6vHeG3uhj1EnK_3NyeLhwBEEUnK5AxNFMz_qOhGdi121fCC2sjqHM/exec", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(orderData)
-        });
+  const res = await fetch("https://script.google.com/macros/s/AKfycbzoq9k_D4K5FVX6vHeG3uhj1EnK_3NyeLhwBEEUnK5AxNFMz_qOhGdi121fCC2sjqHM/exec", {
+    method: "POST",
+    body: JSON.stringify(orderData)
+  });
 
-        if (!res.ok) throw new Error("Server response failed");
+  const text = await res.text();
+  console.log(text);
 
-        successMsg.innerHTML = `
-          ✨ Payment Successful! <br>
-          Your signed copy is being prepared with love. ♡
-        `;
+  successMsg.innerHTML = `
+    ✨ Payment Successful! <br>
+    Your signed copy is being prepared with love. ♡
+  `;
 
-      } catch (error) {
-        alert("Payment successful, but order saving failed.");
-        console.error(error);
-      }
-    },
+} catch (error) {
+  alert("Payment successful, but order saving failed.");
+  console.error(error);
+}
 
     modal: {
       ondismiss: function () {
