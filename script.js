@@ -99,7 +99,7 @@ payBtn.addEventListener("click", function () {
       };
 
       try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbylAecEqTU-cUb29zhXuGKDUAryeuy1VNN_bBVOTRuj6XolJ0BoKjVB-0dKbuiLndE2/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbzoq9k_D4K5FVX6vHeG3uhj1EnK_3NyeLhwBEEUnK5AxNFMz_qOhGdi121fCC2sjqHM/exec", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
