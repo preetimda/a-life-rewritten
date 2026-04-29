@@ -185,25 +185,21 @@ payBtn.addEventListener("click", function () {
 /* bg notes */
 
 const musicBg = document.getElementById("music-background");
-
 const notes = ["♪","♫","♬","♩","𝄞"];
 
-function createMusicNote() {
+function createMusicNote(){
   const note = document.createElement("span");
-  note.classList.add("music-note");
-
+  note.className = "music-note";
   note.innerText = notes[Math.floor(Math.random() * notes.length)];
 
   note.style.left = Math.random() * 100 + "vw";
-  note.style.fontSize = (18 + Math.random() * 28) + "px";
+  note.style.top = "100vh";
+  note.style.fontSize = (18 + Math.random() * 24) + "px";
   note.style.animationDuration = (8 + Math.random() * 8) + "s";
-  note.style.opacity = Math.random();
 
   musicBg.appendChild(note);
 
-  setTimeout(() => {
-    note.remove();
-  }, 16000);
+  setTimeout(() => note.remove(), 17000);
 }
 
-setInterval(createMusicNote, 600);
+setInterval(createMusicNote, 500);
