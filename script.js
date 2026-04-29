@@ -1,4 +1,4 @@
-const pricePerBook = 299;
+const pricePerBook = 1;
 
 const qtyInput = document.getElementById("qty");
 const totalPrice = document.getElementById("totalPrice");
