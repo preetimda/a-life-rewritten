@@ -1048,6 +1048,35 @@ body{
     font-size:20px;
     margin-bottom:8px;
 }
+.qty-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+}
+
+.qty-box button{
+  width:42px;
+  height:42px;
+  border:none;
+  background:#d4a24d;
+  color:#000;
+  font-size:24px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.qty-box input{
+  width:70px;
+  height:42px;
+  text-align:center;
+  font-size:20px;
+  background:#111;
+  color:#fff;
+  border:1px solid #444;
+  border-radius:8px;
+}
 
 .total-box{
     margin:28px 0 20px;
