@@ -393,10 +393,15 @@
         <textarea id="custAddress" placeholder="Full Address" required></textarea>
           <input type="number" id="pincode" placeholder="Pin Code" required>
 
-        <div class="qty-row">
-          <label>Quantity</label>
-          <input type="number" id="qty" value="1" min="1">
-        </div>
+       <div class="qty-row">
+  <label>Quantity</label>
+
+  <div class="qty-box">
+    <button type="button" id="minusQty">−</button>
+    <input type="number" id="qty" value="1" min="1" readonly>
+    <button type="button" id="plusQty">+</button>
+  </div>
+</div>
 
         <div class="total-box">
           Total: ₹<span id="totalPrice">1</span>
